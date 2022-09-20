@@ -25,3 +25,7 @@ call sum_of_team_point (1);
 call sum_of_team_point (2);
 
 call sum_of_team_point (3);
+
+select t.name, sum(p.points)
+from team t inner join player p on p.team_id = t.id
+group by t.name;
